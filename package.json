@@ -1,0 +1,17 @@
+{
+  "name": "journey_to_the_moon",
+  "version": "1.0.0",
+  "description": "Measuring the distance traveled with an Arduino",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "And3y",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "johnny-five": "^0.14.1",
+    "socket.io": "^2.0.4"
+  }
+}
