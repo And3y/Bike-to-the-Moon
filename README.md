@@ -1,3 +1,3 @@
 # Journey to the Moon
 
-A speedometer created with an Arduino to measure distance traveled
+A speedometer created with an Arduino to measure distance traveled, and display the distance on a webpage.
