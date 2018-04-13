@@ -31,7 +31,7 @@ body {
     align-items: center;
     user-select: none;
     transition: .4s;
-} 
+}
 
 .add:hover {
     transition: .2s;

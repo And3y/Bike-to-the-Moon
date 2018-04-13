@@ -17,13 +17,14 @@ socket.on('rotation', function(wheelRotation) {
     if (distanceMeter > 1000) {
         var distanceKm = (distanceMeter * 0.001).toFixed(2);
         disDiv.innerHTML = 'Distance traveled: ' + distanceKm + ' km';
-    } 
+    }
 });
 
 //  Elements
-var disDiv = document.querySelector('.distance'),
-    addDistance = document.querySelector('.add');
-
+var disDiv = document.querySelector('.distance');
+//var addDistance = document.querySelector('.add');
+/*
 addDistance.addEventListener('mousedown', function(){
-    distanceMeter = 1000;
+    distanceMeter + 1000;
 });
+*/
