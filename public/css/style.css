@@ -9,7 +9,7 @@ p {
 body {
     background-image: radial-gradient(circle at bottom left, #352049, #24243E,#0F0C29);
     color: #fff;
-    font-family: 'Futura PT';
+    font-family: 'Futura PT', 'Helvetica', 'Arial', sans-serif;
     font-size: 30px;
 }
 
