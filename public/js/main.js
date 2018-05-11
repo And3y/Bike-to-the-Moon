@@ -18,6 +18,30 @@ socket.on('rotation', function(wheelRotation) {
         var distanceKm = (distanceMeter * 0.001).toFixed(2);
         disDiv.innerHTML = 'Distance traveled: ' + distanceKm + ' km';
     }
+
+    if (distanceMeter === 8848) {
+        mtEverest();
+    }
+
+    if (distanceMeter === 50000) {
+        atmosphere();
+    }
+
+    if (distanceMeter === 215000) {
+        sputnik()
+    }
+
+    if (distanceMeter === 340000) {
+        iss();
+    }
+
+    if (distanceMeter === 515000) {
+        hubble();
+    }
+
+    if (distanceMeter === 383000000) {
+        moonApproach();
+    }
 });
 
 //  Elements
@@ -28,3 +52,35 @@ addDistance.addEventListener('mousedown', function(){
     distanceMeter + 1000;
 });
 */
+
+
+//  Milestones
+function mtEverest() {
+    // 8848 meter
+    console.log("We've reached Mt. Everest");
+};
+
+function atmosphere() {
+    // 50 000 meter
+    console.log("We've reached the top of the stratosphere");
+};
+
+function sputnik() {
+    // 215 000 meter
+    console.log("We've reached the orbig of Sputnik-1");
+};
+
+function iss() {
+    // 340 000 meter
+    console.log("We've reached the orbit of ISS");
+};
+
+function hubble() {
+    // 515 000 meter
+    console.log("We've reached the orbit of the Hubble Telescope");
+};
+
+function moonApproach() {
+    // 383 000 000 meter
+    console.log("We're approaching the moon");
+};
