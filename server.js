@@ -34,7 +34,8 @@ board.on("ready", function () {
             magnetDetected();
 
             var wheelRotation = {
-                number: rotation
+                number: rotation,
+                resetTimer: 0,
             }
             io.sockets.emit('rotation', wheelRotation);
         }

@@ -6,12 +6,18 @@ socket = io.connect('http://localhost:3000');
 var wheelRadius   = 8,
     circumference = 2 * Math.PI * wheelRadius;
 
+    //  Timer
+var timerObj,
+    duration = 0
+
+//  Distance
 var distanceMeter = 0;
 
 //  Logs roatation number from Johnny-Five in server
 socket.on('rotation', function(wheelRotation) {
     //console.log('Johnny-Five: ' + wheelRotation.number);
     //console.log('Distance: ' + ((wheelRotation.number * circumference) * 0.01).toFixed(2) + 'm');
+    duration = wheelRotation.resetTimer;
     distanceMeter = ((wheelRotation.number * circumference) * 0.01).toFixed(2)
     disDiv.innerHTML = 'Distance traveled: ' + distanceMeter + ' m';
     if (distanceMeter > 1000) {
@@ -43,6 +49,31 @@ socket.on('rotation', function(wheelRotation) {
         moonApproach();
     }
 });
+
+if (duration === 0) {
+    startTimer();
+}
+
+function startTimer() {
+    timerObj = setInterval(timer, 1000);
+    function timer() {
+        duration++
+        console.log(duration);
+
+        if (duration === 1) {
+            //fjern pauseklasse
+        }
+
+        if (duration === 10) {
+            console.log('I have reached 10 and will stop animations!')
+            // legg til pauseklasse
+        }
+    }
+}
+
+if (distanceMeter === 0) {
+    // don't start anmation
+}
 
 //  Elements
 var disDiv = document.querySelector('.distance');
