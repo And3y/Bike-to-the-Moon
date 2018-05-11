@@ -13,10 +13,11 @@ var five  = require("johnny-five"),
 
 // Socket.io
 var socket = require('socket.io'),
-    io = socket(server);
+    io     = socket(server);
 
 //  Wheel rotation
 var rotation = 0;
+
 //  Fire when the magnet is detected
 function magnetDetected() {
     rotation++

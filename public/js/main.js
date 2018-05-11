@@ -15,8 +15,7 @@ var distanceMeter = 0;
 
 //  Logs roatation number from Johnny-Five in server
 socket.on('rotation', function(wheelRotation) {
-    //console.log('Johnny-Five: ' + wheelRotation.number);
-    //console.log('Distance: ' + ((wheelRotation.number * circumference) * 0.01).toFixed(2) + 'm');
+    //console.log(wheelRotation.number);
     duration = wheelRotation.resetTimer;
     distanceMeter = ((wheelRotation.number * circumference) * 0.01).toFixed(2)
     disDiv.innerHTML = 'Distance traveled: ' + distanceMeter + ' m';
