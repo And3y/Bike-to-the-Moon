@@ -1,0 +1,25 @@
+.ball {
+  background-color: teal;
+  border-radius: 100px;
+  height: 200px;
+  position: absolute;
+  width: 200px;
+  top: 20%
+}
+
+.slide-in {
+  animation: slide-in 5s infinite;
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(90vw);
+  }
+}

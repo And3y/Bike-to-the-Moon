@@ -15,13 +15,17 @@ var distanceMeter = 0;
 
 //  Logs roatation number from Johnny-Five in server
 socket.on('rotation', function(wheelRotation) {
-    //console.log(wheelRotation.number);
+    console.log('Rotations: ' + wheelRotation.number);
     duration = wheelRotation.resetTimer;
     distanceMeter = ((wheelRotation.number * circumference) * 0.01).toFixed(2)
     disDiv.innerHTML = 'Distance traveled: ' + distanceMeter + ' m';
     if (distanceMeter > 1000) {
         var distanceKm = (distanceMeter * 0.001).toFixed(2);
         disDiv.innerHTML = 'Distance traveled: ' + distanceKm + ' km';
+    }
+
+    if (distanceMeter > 50) {
+        ballEle.classList.add('slide-in');
     }
 
     if (distanceMeter === 8848) {
@@ -61,16 +65,19 @@ function startTimer() {
 
         if (duration === 1) {
             //fjern pauseklasse
+            ballEle.classList.remove('paused');
         }
 
         if (duration === 10) {
             console.log('I have reached 10 and will stop animations!')
+            ballEle.classList.add('paused');
             // legg til pauseklasse
         }
     }
 }
 
 if (distanceMeter === 0) {
+    console.log('Distance is 0')
     // don't start anmation
 }
 
@@ -82,7 +89,7 @@ addDistance.addEventListener('mousedown', function(){
     distanceMeter + 1000;
 });
 */
-
+var ballEle = document.querySelector('.ball');
 
 //  Milestones
 function mtEverest() {
