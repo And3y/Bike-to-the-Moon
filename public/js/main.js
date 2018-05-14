@@ -24,31 +24,31 @@ socket.on('rotation', function(wheelRotation) {
         disDiv.innerHTML = 'Distance traveled: ' + distanceKm + ' km';
     }
 
-    if (distanceMeter > 50) {
+    if (distanceMeter >= 50) {
         ballEle.classList.add('slide-in');
     }
 
-    if (distanceMeter === 8848) {
+    if (distanceMeter >= 8848) {
         mtEverest();
     }
 
-    if (distanceMeter === 50000) {
+    if (distanceMeter >= 50000) {
         atmosphere();
     }
 
-    if (distanceMeter === 215000) {
+    if (distanceMeter >= 215000) {
         sputnik()
     }
 
-    if (distanceMeter === 340000) {
+    if (distanceMeter >= 340000) {
         iss();
     }
 
-    if (distanceMeter === 515000) {
+    if (distanceMeter >= 515000) {
         hubble();
     }
 
-    if (distanceMeter === 383000000) {
+    if (distanceMeter >= 383000000) {
         moonApproach();
     }
 });
