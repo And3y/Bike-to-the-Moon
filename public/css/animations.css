@@ -25,7 +25,16 @@
 }
 
 body {
+  margin: 0;
   overflow: hidden;
+}
+
+.sky-background {
+  background-color: #7ceafc;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+  z-index: 0;
 }
 
 .newt {
