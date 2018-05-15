@@ -11,6 +11,8 @@ body {
     color: #fff;
     font-family: 'Futura PT', 'Helvetica', 'Arial', sans-serif;
     font-size: 30px;
+    overflow: hidden;
+    height: 100%;
 }
 
 .wrapper {

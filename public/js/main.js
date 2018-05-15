@@ -61,7 +61,7 @@ function startTimer() {
     timerObj = setInterval(timer, 1000);
     function timer() {
         duration++
-        console.log(duration);
+        // console.log(duration);
 
         if (duration === 1) {
             //fjern pauseklasse
@@ -121,3 +121,14 @@ function moonApproach() {
     // 383 000 000 meter
     console.log("We're approaching the moon");
 };
+
+//  Stars
+var star1 = document.querySelector('.stars1');
+var star2 = document.querySelector('.stars2');
+var star3 = document.querySelector('.stars3');
+
+ballEle.addEventListener('click', function(){
+    star1.classList.toggle('paused');
+    star2.classList.toggle('paused');
+    star3.classList.toggle('paused');
+})
