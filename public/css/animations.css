@@ -58,7 +58,7 @@ body {
   position: absolute;
   left: -15vw;
   bottom: 40vh;
-  /*animation: mountain_bg 20s ease-in-out 5s forwards;*/
+  animation: mountain_bg 20s ease-in-out 5s forwards;
 }
 
 @keyframes mountain_bg {
@@ -86,7 +86,7 @@ body {
   z-index: -2;
   height: 200vh;
   width: auto;
-  /*animation: mountain 20s ease-in-out 5s forwards;*/
+  animation: mountain 20s ease-in-out 5s forwards;
 }
 
 @keyframes mountain {
@@ -122,7 +122,7 @@ body {
   width: auto;
   right: 20vw;
   bottom: 6vh;
-  /*animation: tower 10s ease-in-out forwards;*/
+  animation: tower 10s ease-in-out forwards;
 }
 
 @keyframes tower {
