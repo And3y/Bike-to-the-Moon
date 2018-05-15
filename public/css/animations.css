@@ -32,9 +32,42 @@ body {
 .sky-background {
   background-color: #7ceafc;
   height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: -1000;
+}
+
+
+.background {
+  background: linear-gradient( #0F0C29, #24243E, #352049, #7ceafc);
+  height: 300vh;
+  width: 100vw;
   position: absolute;
   width: 100vw;
   z-index: 0;
+  animation: gradient 15s ease 40s forwards;
+  position: absolute;
+  z-index: -100;
+  bottom: 0;
+  opacity: 0;
+}
+
+@keyframes gradient {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200vh);
+    opacity: 1;
+  }
 }
 
 .newt {
@@ -131,5 +164,131 @@ body {
   }
   100% {
     bottom: -200vh;
+  }
+}
+
+/*CLOUDS*/
+
+.sky-clouds {
+  height: 100vh;
+  width: 100vw;
+  animation: clouds 50s ease-in-out forwards;
+  position: absolute;
+  bottom: 100vh;
+}
+
+@keyframes clouds {
+  0% {
+    opacity: 0;
+    bottom: 100vh;
+  }
+  100% {
+    opacity: 1;
+    bottom: -100vh;
+  }
+}
+
+.cloud1 img {
+  position: absolute;
+  height: 100px;
+  width: auto;
+  top: 10vh;
+  left: 20vw;
+  animation: move 24s ease-in-out infinite;
+}
+
+.cloud2 img {
+  position: absolute;
+  height: 150px;
+  width: auto;
+  top: 30vh;
+  left: 35vw;
+  animation: move3 20s ease-in-out infinite;
+}
+
+.cloud3 img {
+  position: absolute;
+  height: 100px;
+  width: auto;
+  top: 50vh;
+  right: 15vw;
+  animation: move 20s ease-in-out infinite;
+}
+
+.cloud4 img {
+  position: absolute;
+  height: 150px;
+  width: auto;
+  top: 10vh;
+  right: 15vw;
+  animation: move2 10s ease-in-out infinite;
+}
+
+.cloud5 img {
+  position: absolute;
+  height: 150px;
+  width: auto;
+  bottom: 10vh;
+  right: 5vw;
+  animation: move 30s ease-in-out infinite;
+}
+
+.cloud6 img {
+  position: absolute;
+  height: 200px;
+  width: auto;
+  bottom: 12vh;
+  left: 15vw;
+  animation: move2 30s ease-in-out infinite;
+}
+
+.cloud7 img {
+  position: absolute;
+  height: 150px;
+  width: auto;
+  bottom: 5vh;
+  left: 25vw;
+  animation: move 10s ease-in-out infinite;
+}
+
+@keyframes move {
+  0%{
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    transform: translate(-300px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes move2 {
+  0%{
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    transform: translate(200px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes move3 {
+  0%{
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    transform: translate(-100px, 0);
+    opacity: 0;
   }
 }
