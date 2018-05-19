@@ -17,16 +17,29 @@
 
 @keyframes slide-in {
   0% {
-    transform: translateX(0vw);
+    transform: translateX(100vw);
   }
   100% {
-    transform: translateX(90vw);
+    transform: translateX(-50vw);
   }
 }
 
-body {
-  margin: 0;
-  overflow: hidden;
+@keyframes up-and-down {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .sky-background {
@@ -291,4 +304,22 @@ body {
     transform: translate(-100px, 0);
     opacity: 0;
   }
+}
+
+/* SPUTNIK */
+.sputnik {
+  animation: slide-in 10s forwards;
+}
+
+.sputnik img {
+  height: 500px;
+  width: auto;
+  position: absolute;
+  animation: up-and-down 10s infinite;
+  transform: rotate(-25deg);
+}
+
+/* ISS */
+.iss {
+  display: none;
 }

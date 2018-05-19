@@ -2,41 +2,202 @@
     box-sizing: border-box;
 }
 
-p {
-    margin: 0 0 10px 0;
-}
-
 body {
     background-image: radial-gradient(circle at bottom left, #352049, #24243E,#0F0C29);
-    color: #fff;
     font-family: 'Futura PT', 'Helvetica', 'Arial', sans-serif;
-    font-size: 30px;
     overflow: hidden;
     height: 100%;
+    margin: 0;
+    padding: 50px;
 }
 
-.wrapper {
-    height: 100vh;
+.distance {
+    color: #18E7C9;
+    font-size: 44px;
+    text-align: center;
+}
+
+.distance-number {
+    font-size: 57px;
+    font-weight: 500;
+}
+
+.progress-bar {
+    background-color: #fff;
+    border-radius: 100px;
+    bottom: 50px;
+    height: 35px;
+    left: 50%;
+    /* overflow-x: hidden; */
+    position: absolute;
+    transform: translateX(-50%);
+    width: 90vw;
+}
+
+.progress-ship {
+    position: absolute;
+    height: 80px;
+    width: auto;
+    bottom: 27px;
+    right: 40%;
+    z-index: 5;
+}
+
+.progress {
+    background: linear-gradient(to right, #264B88, #8DB8E7);
+    width: 40%;
+    height: 100%;
+    border-radius: 100px 0px 0px 100px;
+}
+
+.sputnik-milstone {
+    position: absolute;
+    color: #fff;
+    font-size: 19px;
+    transform: rotate(-45deg);
+    transform-origin: center left;
+    left: 100px;
+    bottom: 40px;
+}
+
+.sputnik-milstone:after {
+    content: '';
+    position: absolute;
+    height: 45px;
+    width: 7px;
+    background-color: #57FFD9;
+    border-radius: 10px 10px 0px 0px;
+    bottom: -31px;
+    left: -25px;
+    transform: rotate(45deg);
+}
+
+.intro {
+    animation: fade-out 1s forwards 4.5s;
+    background-image: radial-gradient(circle at bottom left, #352049, #24243E,#0F0C29);
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    left: 0;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+    display: none;
 }
 
-.add {
-    margin-top: 15px;
-    padding: 10px;
-    border: 1px solid #fff;
-    cursor: pointer;
+.intro-box {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
-    user-select: none;
-    transition: .4s;
+    width: 100%;
 }
 
-.add:hover {
-    transition: .2s;
-    background: #fff;
-    color: #24243E;
+.present-box {
+    height: 300px;
+}
+
+.present {
+    animation: scale-up .5s cubic-bezier(.87,.13,.84,.91) forwards, fade-out .3s forwards 4s;
+    color: #fff;
+    font-family: 'Futura PT';
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    opacity: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.journey {
+    animation: scale-up .5s cubic-bezier(.87,.13,.84,.91) forwards .25s, full-scale-up .5s cubic-bezier(.19,.73,.65,.92) forwards 4s;
+    height: 500px;
+    opacity: 0;
+    width: auto;
+}
+
+.lightbeam {
+    bottom: -100px;
+    height: 900px;
+    opacity: 0;
+    position: absolute;
+    transform-origin: bottom center;
+    width: auto;
+    z-index: 0;
+    animation: fade-out .3s forwards 5s;
+}
+
+.left-beam {
+    right: 35%;
+    animation: turn-on-lights .2s .7s forwards, waving-lights 10s alternate-reverse infinite;
+}
+
+.right-beam {
+    left: 35%;
+    transform: rotate(-20deg);
+    animation: turn-on-lights .2s .8s forwards, waving-lights 10s 1s alternate-reverse infinite;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes waving-lights {
+    0% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes turn-on-lights {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scale-up {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes full-scale-up {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: scale(30);
+        opacity: 0;
+    }
 }

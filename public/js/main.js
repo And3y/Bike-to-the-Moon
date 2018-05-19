@@ -21,7 +21,7 @@ socket.on('rotation', function(wheelRotation) {
     disDiv.innerHTML = 'Distance traveled: ' + distanceMeter + ' m';
     if (distanceMeter > 1000) {
         var distanceKm = (distanceMeter * 0.001).toFixed(2);
-        disDiv.innerHTML = 'Distance traveled: ' + distanceKm + ' km';
+        disDiv.innerHTML = 'Distance traveled<br> <span class="distance-number">' + distanceKm + ' km</span>';
     }
 
     if (distanceMeter >= 50) {
@@ -51,6 +51,7 @@ socket.on('rotation', function(wheelRotation) {
     if (distanceMeter >= 383000000) {
         moonApproach();
     }
+    progressBar.style.width = percentageOfTrip + '%';
 });
 
 if (duration === 0) {
@@ -83,13 +84,14 @@ if (distanceMeter === 0) {
 
 //  Elements
 var disDiv = document.querySelector('.distance');
-//var addDistance = document.querySelector('.add');
-/*
-addDistance.addEventListener('mousedown', function(){
-    distanceMeter + 1000;
-});
-*/
+
 var ballEle = document.querySelector('.ball');
+
+//  Progress bar
+var percentageOfTrip = (distanceMeter / 384000000) * 100;
+
+var progressBar = document.querySelector('.progress');
+console.log(progressBar);
 
 //  Milestones
 function mtEverest() {
