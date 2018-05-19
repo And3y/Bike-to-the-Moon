@@ -58,7 +58,7 @@
   position: absolute;
   width: 100vw;
   z-index: 0;
-  animation: gradient 15s ease 40s forwards;
+  animation: gradient 15s ease 35s forwards;
   position: absolute;
   z-index: -100;
   bottom: 0;
@@ -84,17 +84,44 @@
 }
 
 .newt {
-  display: flex;
-  justify-content: center;
+  transform: translateY(100vh);
+  animation: fly-out 5s ease-out 38s forwards;
 }
 
-.newt img {
+@keyframes fly-out {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(-200vh)
+  }
+}
+
+
+#newt {
   height: 450px;
   width: auto;
-  transform: rotate(-90deg);
   position: absolute;
   bottom: 0;
   margin-left: -30px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+}
+
+#front {
+  position: absolute;
+  height: 120px;
+  width: auto;
+  right: 45%;
+  bottom: 250px;
+}
+
+#back {
+  position: absolute;
+  height: 120px;
+  width: auto;
+  bottom: 84px;
+  right: 45%;
 }
 
 .mountain_bg img {
@@ -306,6 +333,7 @@
   }
 }
 
+<<<<<<< HEAD
 /* SPUTNIK */
 .sputnik {
   animation: slide-in 10s forwards;
@@ -323,3 +351,45 @@
 .iss {
   display: none;
 }
+=======
+/*Space Newt*/
+
+.newt-space {
+  height: 600px;
+  width: 450px;
+  transform: translateX(-500px);
+  animation: slide-in 1s ease-out 45s forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+#newt-space {
+  position: absolute;
+  height: 450px;
+  width: auto;
+  top: 25%;
+}
+
+#front-space {
+  position: absolute;
+  height: 120px;
+  width: auto;
+  top: 62%;
+  left: 50%;
+}
+
+#back-space {
+  position: absolute;
+  height: 120px;
+  width: auto;
+  top: 62%;
+  left: 14%;
+}
+>>>>>>> origin/master
