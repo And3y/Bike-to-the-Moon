@@ -23,6 +23,10 @@ socket.on('rotation', function(wheelRotation) {
         var distanceKm = (distanceMeter * 0.001).toFixed(2);
         disDiv.innerHTML = 'Distance traveled<br> <span class="distance-number">' + distanceKm + ' km</span>';
     }
+    //  Progress bar
+    var percentageOfTrip = (distanceMeter / 10000) * 100;
+    progressBar.style.width = percentageOfTrip + '%';
+    progressShip.style.left = (percentageOfTrip - 2) + '%';
 
     if (distanceMeter >= 50) {
         ballEle.classList.add('slide-in');
