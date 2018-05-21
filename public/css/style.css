@@ -28,7 +28,6 @@ body {
     bottom: 50px;
     height: 35px;
     left: 50%;
-    /* overflow-x: hidden; */
     position: absolute;
     transform: translateX(-50%);
     width: 90vw;
@@ -38,37 +37,79 @@ body {
     position: absolute;
     height: 80px;
     width: auto;
-    bottom: 27px;
-    right: 40%;
+    bottom: -23px;
+    left: 0%;
     z-index: 5;
 }
 
 .progress {
     background: linear-gradient(to right, #264B88, #8DB8E7);
-    width: 40%;
+    width: 0%;
     height: 100%;
     border-radius: 100px 0px 0px 100px;
 }
 
-.sputnik-milstone {
+.milestone {
     position: absolute;
     color: #fff;
     font-size: 19px;
     transform: rotate(-45deg);
     transform-origin: center left;
-    left: 100px;
     bottom: 40px;
+    opacity: 0;
+    transition: 1s;
 }
 
-.sputnik-milstone:after {
+.milestone-fade-in {
+    opacity: 1;
+    transition: 1s;
+}
+
+.sputnik-milestone {
+    left: 6%;
+}
+
+.sputnik-milestone:after {
+    bottom: -31px;
+    left: -25px;
     content: '';
     position: absolute;
     height: 45px;
     width: 7px;
     background-color: #57FFD9;
     border-radius: 10px 10px 0px 0px;
-    bottom: -31px;
+    transform: rotate(45deg);
+}
+
+.iss-milestone {
+    left: 14%;
+}
+
+.iss-milestone:after {
+    bottom: -27px;
+    left: -29px;
+    content: '';
+    position: absolute;
+    height: 45px;
+    width: 7px;
+    background-color: #57FFD9;
+    border-radius: 10px 10px 0px 0px;
+    transform: rotate(45deg);
+}
+
+.hubble-milestone {
+    left: 22%;
+}
+
+.hubble-milestone:after {
+    bottom: -30px;
     left: -25px;
+    content: '';
+    position: absolute;
+    height: 45px;
+    width: 7px;
+    background-color: #57FFD9;
+    border-radius: 10px 10px 0px 0px;
     transform: rotate(45deg);
 }
 
