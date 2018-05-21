@@ -30,25 +30,26 @@ socket.on('rotation', function(wheelRotation) {
     progressBar.style.width = percentageOfTrip + '%';
     progressShip.style.left = (percentageOfTrip - 2) + '%';
 
-    if (distanceMeter >= 215000) {
+    //  Call on animation functions
+    if (distanceMeter > 600 && distanceMeter < 620) {
         sputnik()
         sputnikMilestone.classList.add('milestone-fade-in');
         sputnikSpaceCraft.classList.add('animate-space-craft');
     }
 
-    if (distanceMeter >= 340000) {
+    if (distanceMeter > 1450 && distanceMeter < 1470) {
         iss();
         issMilestone.classList.add('milestone-fade-in');
         sputnikSpaceCraft.classList.add('hide');
     }
 
-    if (distanceMeter >= 515000) {
+    if (distanceMeter > 2200 && distanceMeter < 2220) {
         hubble();
         hubbleMilestone.classList.add('milestone-fade-in');
         hubbleSpaceCraft.classList.add('hide');
     }
 
-    if (distanceMeter >= 383000000) {
+    if (distanceMeter > 9000 && distanceMeter < 9020) {
         moonApproach();
     }
     progressBar.style.width = percentageOfTrip + '%';
