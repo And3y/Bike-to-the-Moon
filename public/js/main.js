@@ -6,16 +6,35 @@ socket = io.connect('http://localhost:3000');
 var wheelRadius   = 25,
     circumference = 2 * Math.PI * wheelRadius;
 
-    //  Timer
+//  Timer
 var timerObj,
     duration = 0
 
 //  Distance
 var distanceMeter = 0;
 
+//  Stars
+var star = document.querySelectorAll('.star');
+
+//  Milestones
+var sputnikMilestone = document.querySelector('.sputnik-milestone'),
+    issMilestone     = document.querySelector('.iss-milestone'),
+    hubbleMilestone  = document.querySelector('.hubble-milestone');
+
+//  Space crafts
+var sputnikSpaceCraft = document.querySelector('.sputnik'),
+    issSpaceCraft     = document.querySelector('.iss'),
+    hubbleSpaceCraft  = document.querySelector('.hubble');
+
+//  Progress bar
+var progressBar  = document.querySelector('.progress'),
+    progressShip = document.querySelector('.progress-ship');
+
+//  Elements
+var disDiv = document.querySelector('.distance');
+
 //  Logs roatation number from Johnny-Five in server
 socket.on('rotation', function(wheelRotation) {
-    console.log('Rotations: ' + wheelRotation.number);
     duration = wheelRotation.resetTimer;
     distanceMeter = ((wheelRotation.number * circumference) * 0.01).toFixed(2)
     disDiv.innerHTML = 'Distance traveled<br> <span class="distance-number">' + distanceMeter + ' m</span>';
@@ -48,15 +67,19 @@ socket.on('rotation', function(wheelRotation) {
         hubble();
         hubbleMilestone.classList.add('milestone-fade-in');
         hubbleSpaceCraft.classList.add('animate-space-craft');
+        issSpaceCraft.classList.add('hide');
+    }
+
+    if (distanceMeter > 2420 && distanceMeter < 2440) {
         hubbleSpaceCraft.classList.add('hide');
     }
 
     if (distanceMeter > 9000 && distanceMeter < 9020) {
         moonApproach();
     }
-    progressBar.style.width = percentageOfTrip + '%';
 });
 
+//  Pause timer
 if (duration === 0) {
     startTimer();
 }
@@ -65,7 +88,6 @@ function startTimer() {
     timerObj = setInterval(timer, 1000);
     function timer() {
         duration++
-        // console.log(duration);
 
         if (duration === 1) {
             //fjern pauseklasse
@@ -84,60 +106,24 @@ function startTimer() {
     }
 }
 
-if (distanceMeter === 0) {
-    console.log('Distance is 0')
-    // don't start anmation
-}
+// if (distanceMeter === 0) {
+//     console.log('Distance is 0')
+//     // don't start anmation
+// }
 
-//  Elements
-var disDiv = document.querySelector('.distance');
-
-var ballEle = document.querySelector('.ball');
-
-//  Progress bar
-var percentageOfTrip = (distanceMeter / 384000000) * 100;
-
-var progressBar = document.querySelector('.progress');
-console.log(progressBar);
-
-//  Milestones
-function mtEverest() {
-    // 8848 meter
-    console.log("We've reached Mt. Everest");
-};
-
-function atmosphere() {
-    // 50 000 meter
-    console.log("We've reached the top of the stratosphere");
-};
-
+//  Add animations
 function sputnik() {
-    // 215 000 meter
     console.log("We've reached the orbig of Sputnik-1");
 };
 
 function iss() {
-    // 340 000 meter
     console.log("We've reached the orbit of ISS");
 };
 
 function hubble() {
-    // 515 000 meter
     console.log("We've reached the orbit of the Hubble Telescope");
 };
 
 function moonApproach() {
-    // 383 000 000 meter
     console.log("We're approaching the moon");
 };
-
-//  Stars
-var star1 = document.querySelector('.stars1');
-var star2 = document.querySelector('.stars2');
-var star3 = document.querySelector('.stars3');
-
-ballEle.addEventListener('click', function(){
-    star1.classList.toggle('paused');
-    star2.classList.toggle('paused');
-    star3.classList.toggle('paused');
-})

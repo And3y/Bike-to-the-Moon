@@ -1,14 +1,6 @@
-.ball {
-  background-color: teal;
-  border-radius: 100px;
-  height: 200px;
-  position: absolute;
-  width: 200px;
-  top: 20%
-}
-
-.slide-in {
-  animation: slide-in 5s infinite;
+body {
+  margin: 0;
+  overflow: hidden;
 }
 
 .paused {
@@ -48,6 +40,8 @@
   width: 100vw;
   position: absolute;
   z-index: -1000;
+  top: 0;
+  left: 0;
 }
 
 
