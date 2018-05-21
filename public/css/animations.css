@@ -15,12 +15,12 @@
   animation-play-state: paused;
 }
 
-@keyframes slide-in {
+@keyframes glide-in {
   0% {
-    transform: translateX(100vw);
+    transform: translateX(0vw);
   }
   100% {
-    transform: translateX(-50vw);
+    transform: translateX(-200vw);
   }
 }
 
@@ -333,10 +333,20 @@
   }
 }
 
-<<<<<<< HEAD
 /* SPUTNIK */
-.sputnik {
-  animation: slide-in 10s forwards;
+.space-craft img{
+  height: 500px;
+  width: auto;
+  position: absolute;
+  right: -500px;
+}
+
+.animate-space-craft {
+  animation: glide-in 30s forwards;
+}
+
+.hide {
+  display: none;
 }
 
 .sputnik img {
@@ -347,11 +357,6 @@
   transform: rotate(-25deg);
 }
 
-/* ISS */
-.iss {
-  display: none;
-}
-=======
 /*Space Newt*/
 
 .newt-space {
@@ -392,4 +397,3 @@
   top: 62%;
   left: 14%;
 }
->>>>>>> origin/master
