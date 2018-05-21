@@ -40,12 +40,14 @@ socket.on('rotation', function(wheelRotation) {
     if (distanceMeter > 1450 && distanceMeter < 1470) {
         iss();
         issMilestone.classList.add('milestone-fade-in');
+        issSpaceCraft.classList.add('animate-space-craft');
         sputnikSpaceCraft.classList.add('hide');
     }
 
     if (distanceMeter > 2200 && distanceMeter < 2220) {
         hubble();
         hubbleMilestone.classList.add('milestone-fade-in');
+        hubbleSpaceCraft.classList.add('animate-space-craft');
         hubbleSpaceCraft.classList.add('hide');
     }
 
