@@ -18,7 +18,9 @@ socket.on('rotation', function(wheelRotation) {
     console.log('Rotations: ' + wheelRotation.number);
     duration = wheelRotation.resetTimer;
     distanceMeter = ((wheelRotation.number * circumference) * 0.01).toFixed(2)
-    disDiv.innerHTML = 'Distance traveled: ' + distanceMeter + ' m';
+    disDiv.innerHTML = 'Distance traveled<br> <span class="distance-number">' + distanceMeter + ' m</span>';
+
+    //  Convert to kilometers if over 1000 meters
     if (distanceMeter > 1000) {
         var distanceKm = (distanceMeter * 0.001).toFixed(2);
         disDiv.innerHTML = 'Distance traveled<br> <span class="distance-number">' + distanceKm + ' km</span>';
