@@ -39,16 +39,19 @@ socket.on('rotation', function(wheelRotation) {
     if (distanceMeter >= 215000) {
         sputnik()
         sputnikMilestone.classList.add('milestone-fade-in');
+        sputnikSpaceCraft.classList.add('animate-space-craft');
     }
 
     if (distanceMeter >= 340000) {
         iss();
         issMilestone.classList.add('milestone-fade-in');
+        sputnikSpaceCraft.classList.add('hide');
     }
 
     if (distanceMeter >= 515000) {
         hubble();
         hubbleMilestone.classList.add('milestone-fade-in');
+        hubbleSpaceCraft.classList.add('hide');
     }
 
     if (distanceMeter >= 383000000) {
