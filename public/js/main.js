@@ -69,13 +69,17 @@ function startTimer() {
 
         if (duration === 1) {
             //fjern pauseklasse
-            ballEle.classList.remove('paused');
+            for (let i = 0; i < star.length; i++) {
+                star[i].classList.remove('paused');
+            }
         }
 
-        if (duration === 10) {
-            console.log('I have reached 10 and will stop animations!')
-            ballEle.classList.add('paused');
+        if (duration === 5) {
             // legg til pauseklasse
+            console.log('I have reached 10 and will stop animations!')
+            for (let i = 0; i < star.length; i++) {
+                star[i].classList.add('paused');
+            }
         }
     }
 }
