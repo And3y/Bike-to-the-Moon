@@ -30,18 +30,6 @@ socket.on('rotation', function(wheelRotation) {
     progressBar.style.width = percentageOfTrip + '%';
     progressShip.style.left = (percentageOfTrip - 2) + '%';
 
-    if (distanceMeter >= 50) {
-        ballEle.classList.add('slide-in');
-    }
-
-    if (distanceMeter >= 8848) {
-        mtEverest();
-    }
-
-    if (distanceMeter >= 50000) {
-        atmosphere();
-    }
-
     if (distanceMeter >= 215000) {
         sputnik()
         sputnikMilestone.classList.add('milestone-fade-in');
