@@ -31,7 +31,7 @@ io.sockets.on('connection', function(socket) {
 //  Johnny-Five script
 board.on("ready", function () {
     new five.Sensor("I0").on("change", function() {
-        console.log(this.value);
+        //console.log(this.value);
         if (this.value = 520) {
             magnetDetected();
 
