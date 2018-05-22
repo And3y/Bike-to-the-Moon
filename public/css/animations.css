@@ -51,7 +51,7 @@ body {
 	position: absolute;
 	width: 100vw;
 	z-index: 0;
-	animation: gradient 15s ease 35s forwards;
+	animation: gradient 15s ease 10s forwards;
 	position: absolute;
 	z-index: -100;
 	bottom: 0;
@@ -78,7 +78,7 @@ body {
 
 .newt {
 	transform: translateY(100vh);
-	animation: fly-out 5s ease-out 38s forwards;
+	animation: fly-out 3s ease-out 13s forwards;
 }
 
 @keyframes fly-out {
@@ -86,7 +86,7 @@ body {
 		transform: translateY(100vh);
 	}
 	100% {
-		transform: translateY(-200vh)
+		transform: translateY(-100vh)
 	}
 }
 
@@ -123,7 +123,7 @@ body {
 	position: absolute;
 	left: -15vw;
 	bottom: 40vh;
-	animation: mountain_bg 20s ease-in-out 5s forwards;
+	animation: mountain_bg 10s ease-in-out 2s forwards;
 }
 
 @keyframes mountain_bg {
@@ -151,7 +151,7 @@ body {
 	z-index: -2;
 	height: 200vh;
 	width: auto;
-	animation: mountain 20s ease-in-out 5s forwards;
+	animation: mountain 10s ease-in-out 2s forwards;
 }
 
 @keyframes mountain {
@@ -187,7 +187,7 @@ body {
 	width: auto;
 	right: 20vw;
 	bottom: 6vh;
-	animation: tower 10s ease-in-out forwards;
+	animation: tower 5s ease-in-out forwards;
 }
 
 @keyframes tower {
@@ -204,7 +204,7 @@ body {
 .sky-clouds {
 	height: 100vh;
 	width: 100vw;
-	animation: clouds 50s ease-in-out forwards;
+	animation: clouds 10s ease-in-out 5s forwards;
 	position: absolute;
 	bottom: 100vh;
 }
@@ -356,7 +356,7 @@ body {
 	height: 600px;
 	width: 450px;
 	transform: translateX(-500px);
-	animation: slide-in 1s ease-out 5s forwards;
+	animation: slide-in 2s ease-out 20s forwards;
 }
 
 @keyframes slide-in {
