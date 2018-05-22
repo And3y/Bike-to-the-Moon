@@ -158,13 +158,3 @@ hubbleSpaceCraft.addEventListener('animationend', function() {
 cosmonewt.addEventListener('animationend', function() {
     intro.classList.remove('hide');
 })
-
-// intro.addEventListener('animationend', function(){
-//     console.log('i have ended the intro');
-//     intro.classList.add('hide');
-// })
-
-// if (distanceMeter === 0) {
-//     console.log('Distance is 0')
-//     // don't start anmation
-// }
