@@ -24,14 +24,30 @@ var sputnikMilestone = document.querySelector('.sputnik-milestone'),
 //  Celestial object
 var sputnikSpaceCraft = document.querySelector('.sputnik'),
     issSpaceCraft     = document.querySelector('.iss'),
-    hubbleSpaceCraft  = document.querySelector('.hubble');
+    hubbleSpaceCraft  = document.querySelector('.hubble'),
+    moonSpaceCraft    = document.querySelector('.moon');
 
 //  Progress bar
 var progressBar  = document.querySelector('.progress'),
     progressShip = document.querySelector('.progress-ship');
 
 //  Elements
-var disDiv = document.querySelector('.distance');
+var disDiv = document.querySelector('.distance'),
+    intro  = document.querySelector('.intro');
+
+
+//  Sleep function
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+//  Start intro sequence
+async function startIntro() {
+    intro.classList.add('animate-intro');
+    // LET THE INTRO RUN THEN HIDE IT
+    await sleep(45000);
+    intro.classList.add('hide');
+}
 
 //  Logs roatation number from Johnny-Five in server
 socket.on('rotation', function(wheelRotation) {
@@ -49,56 +65,63 @@ socket.on('rotation', function(wheelRotation) {
     progressBar.style.width = percentageOfTrip + '%';
     progressShip.style.left = (percentageOfTrip - 2) + '%';
 
-    //  Call on animation functions
+    if (percentageOfTrip > 100) {
+        progressBar.style.width = '100%';
+        progressShip.style.left = '100%';
+    }
+
+    if (wheelRotation.number === 1) {
+        console.log('i will strat the intro');
+        startIntro();
+    }
+
+    //  Add animations
     if (distanceMeter > 600 && distanceMeter < 620) {
-        sputnik()
+        sputnikSpaceCraft.style.willChange = 'transform, translate';
         sputnikMilestone.classList.add('milestone-fade-in');
         sputnikSpaceCraft.classList.add('animate-space-craft');
     }
 
     if (distanceMeter > 1450 && distanceMeter < 1470) {
-        iss();
+        issSpaceCraft.style.willChange = 'transform, translate';
         issMilestone.classList.add('milestone-fade-in');
         issSpaceCraft.classList.add('animate-space-craft');
-        sputnikSpaceCraft.classList.add('hide');
     }
 
     if (distanceMeter > 2200 && distanceMeter < 2220) {
-        hubble();
+        hubbleSpaceCraft.style.willChange = 'transform, translate';
         hubbleMilestone.classList.add('milestone-fade-in');
         hubbleSpaceCraft.classList.add('animate-space-craft');
-        issSpaceCraft.classList.add('hide');
-    }
-
-    if (distanceMeter > 2420 && distanceMeter < 2440) {
-        hubbleSpaceCraft.classList.add('hide');
     }
 
     if (distanceMeter > 9000 && distanceMeter < 9020) {
-        moonApproach();
+    }
+
+    if (distanceMeter > 9500 && distanceMeter < 9520) {
+        moonSpaceCraft.classList.remove('hide');
+        moonSpaceCraft.classList.add('animate-moon');
     }
 });
 
 //  Pause timer
 if (duration === 0) {
-    startTimer();
+    pauseTimer();
 }
 
-function startTimer() {
+function pauseTimer() {
     timerObj = setInterval(timer, 1000);
     function timer() {
         duration++
 
+        //  Remove the pause from stars
         if (duration === 1) {
-            //fjern pauseklasse
             for (let i = 0; i < star.length; i++) {
                 star[i].classList.remove('paused');
             }
         }
 
+        //  Pause the stars
         if (duration === 5) {
-            // legg til pauseklasse
-            console.log('I have reached 10 and will stop animations!')
             for (let i = 0; i < star.length; i++) {
                 star[i].classList.add('paused');
             }
@@ -106,24 +129,28 @@ function startTimer() {
     }
 }
 
+//  Hide unused celestial objects
+sputnikSpaceCraft.addEventListener('animationend', function() {
+    this.style.willChange = 'auto';
+    this.classList.add('hide');
+})
+
+issSpaceCraft.addEventListener('animationend', function() {
+    this.style.willChange = 'auto';
+    this.classList.add('hide');
+})
+
+hubbleSpaceCraft.addEventListener('animationend', function() {
+    this.style.willChange = 'auto';
+    this.classList.add('hide');
+})
+
+// intro.addEventListener('animationend', function(){
+//     console.log('i have ended the intro');
+//     intro.classList.add('hide');
+// })
+
 // if (distanceMeter === 0) {
 //     console.log('Distance is 0')
 //     // don't start anmation
 // }
-
-//  Add animations
-function sputnik() {
-    console.log("We've reached the orbig of Sputnik-1");
-};
-
-function iss() {
-    console.log("We've reached the orbit of ISS");
-};
-
-function hubble() {
-    console.log("We've reached the orbit of the Hubble Telescope");
-};
-
-function moonApproach() {
-    console.log("We're approaching the moon");
-};
