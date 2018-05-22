@@ -1,393 +1,405 @@
 body {
-  margin: 0;
-  overflow: hidden;
+	margin: 0;
+	overflow: hidden;
 }
 
 .paused {
-  animation-play-state: paused;
+	animation-play-state: paused;
 }
 
 @keyframes glide-in {
-  0% {
-    transform: translateX(0vw);
-  }
-  100% {
-    transform: translateX(-200vw);
-  }
+	0% {
+		transform: translateX(0vw);
+	}
+	100% {
+		transform: translateX(-200vw);
+	}
 }
 
 @keyframes up-and-down {
-  0% {
-    transform: translateY(0px);
-  }
-  25% {
-    transform: translateY(10px);
-  }
-  50% {
-    transform: translateY(0px);
-  }
-  75% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+	0% {
+		transform: translateY(0px);
+	}
+	25% {
+		transform: translateY(10px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	75% {
+		transform: translateY(10px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
 }
 
 .sky-background {
-  background-color: #7ceafc;
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  z-index: -1000;
-  top: 0;
-  left: 0;
+	background-color: #7ceafc;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	z-index: -1000;
+	top: 0;
+	left: 0;
 }
 
-
 .background {
-  background: linear-gradient( #0F0C29, #24243E, #352049, #7ceafc);
-  height: 300vh;
-  width: 100vw;
-  position: absolute;
-  width: 100vw;
-  z-index: 0;
-  animation: gradient 15s ease 35s forwards;
-  position: absolute;
-  z-index: -100;
-  bottom: 0;
-  opacity: 0;
+	background: linear-gradient( #0F0C29, #24243E, #352049, #7ceafc);
+	height: 300vh;
+	width: 100vw;
+	position: absolute;
+	width: 100vw;
+	z-index: 0;
+	animation: gradient 15s ease 35s forwards;
+	position: absolute;
+	z-index: -100;
+	bottom: 0;
+	opacity: 0;
 }
 
 @keyframes gradient {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(100vh);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(200vh);
-    opacity: 1;
-  }
+	0% {
+		transform: translateY(0);
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	50% {
+		transform: translateY(100vh);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(200vh);
+		opacity: 1;
+	}
 }
 
 .newt {
-  transform: translateY(100vh);
-  animation: fly-out 5s ease-out 38s forwards;
+	transform: translateY(100vh);
+	animation: fly-out 5s ease-out 38s forwards;
 }
 
 @keyframes fly-out {
-  0% {
-    transform: translateY(100vh);
-  }
-  100% {
-    transform: translateY(-200vh)
-  }
+	0% {
+		transform: translateY(100vh);
+	}
+	100% {
+		transform: translateY(-200vh)
+	}
 }
 
-
 #newt {
-  height: 450px;
-  width: auto;
-  position: absolute;
-  bottom: 0;
-  margin-left: -30px;
-  left: 50%;
-  transform: translateX(-50%) rotate(-90deg);
+	height: 450px;
+	width: auto;
+	position: absolute;
+	bottom: 0;
+	margin-left: -30px;
+	left: 50%;
+	transform: translateX(-50%) rotate(-90deg);
 }
 
 #front {
-  position: absolute;
-  height: 120px;
-  width: auto;
-  right: 45%;
-  bottom: 250px;
+	position: absolute;
+	height: 120px;
+	width: auto;
+	right: 45%;
+	bottom: 250px;
 }
 
 #back {
-  position: absolute;
-  height: 120px;
-  width: auto;
-  bottom: 84px;
-  right: 45%;
+	position: absolute;
+	height: 120px;
+	width: auto;
+	bottom: 84px;
+	right: 45%;
 }
 
 .mountain_bg img {
-  height: 500px;
-  width: auto;
-  z-index: -4;
-  position: absolute;
-  left: -15vw;
-  bottom: 40vh;
-  animation: mountain_bg 20s ease-in-out 5s forwards;
+	height: 500px;
+	width: auto;
+	z-index: -4;
+	position: absolute;
+	left: -15vw;
+	bottom: 40vh;
+	animation: mountain_bg 20s ease-in-out 5s forwards;
 }
 
 @keyframes mountain_bg {
-  0% {
-    height: 500px;
-    bottom: 40vh;
-    left: -15vw;
-  }
-  50% {
-    height: 200px;
-    bottom: 40vh;
-    left: 10vw;
-  }
-  100% {
-    height: 100px;
-    left: 10vw;
-    bottom: -140vh;
-  }
+	0% {
+		height: 500px;
+		bottom: 40vh;
+		left: -15vw;
+	}
+	50% {
+		height: 200px;
+		bottom: 40vh;
+		left: 10vw;
+	}
+	100% {
+		height: 100px;
+		left: 10vw;
+		bottom: -140vh;
+	}
 }
 
 .mountain img {
-  position: absolute;
-  right: -280vw;
-  bottom: -20vh;
-  z-index: -2;
-  height: 200vh;
-  width: auto;
-  animation: mountain 20s ease-in-out 5s forwards;
+	position: absolute;
+	right: -280vw;
+	bottom: -20vh;
+	z-index: -2;
+	height: 200vh;
+	width: auto;
+	animation: mountain 20s ease-in-out 5s forwards;
 }
 
 @keyframes mountain {
-  0% {
-    height: 200vh;
-    right: -280vw;
-  }
-  50% {
-    height: 50vh;
-    right: -10vw;
-    bottom: 10vh;
-  }
-  100% {
-    height: 50vh;
-    right: -10vw;
-    bottom: -100vh;
-  }
+	0% {
+		height: 200vh;
+		right: -280vw;
+	}
+	50% {
+		height: 50vh;
+		right: -10vw;
+		bottom: 10vh;
+	}
+	100% {
+		height: 50vh;
+		right: -10vw;
+		bottom: -100vh;
+	}
 }
 
 @keyframes mountain_down {
-  0% {
-    bottom: 10vh;
-  }
-  100% {
-    bottom: -200vh;
-  }
+	0% {
+		bottom: 10vh;
+	}
+	100% {
+		bottom: -200vh;
+	}
 }
 
 .tower img {
-  position: absolute;
-  z-index: -1;
-  height: 150vh;
-  width: auto;
-  right: 20vw;
-  bottom: 6vh;
-  animation: tower 10s ease-in-out forwards;
+	position: absolute;
+	z-index: -1;
+	height: 150vh;
+	width: auto;
+	right: 20vw;
+	bottom: 6vh;
+	animation: tower 10s ease-in-out forwards;
 }
 
 @keyframes tower {
-  0% {
-    bottom: 6vh;
-  }
-  100% {
-    bottom: -200vh;
-  }
+	0% {
+		bottom: 6vh;
+	}
+	100% {
+		bottom: -200vh;
+	}
 }
 
 /*CLOUDS*/
 
 .sky-clouds {
-  height: 100vh;
-  width: 100vw;
-  animation: clouds 50s ease-in-out forwards;
-  position: absolute;
-  bottom: 100vh;
+	height: 100vh;
+	width: 100vw;
+	animation: clouds 50s ease-in-out forwards;
+	position: absolute;
+	bottom: 100vh;
 }
 
 @keyframes clouds {
-  0% {
-    opacity: 0;
-    bottom: 100vh;
-  }
-  100% {
-    opacity: 1;
-    bottom: -100vh;
-  }
+	0% {
+		opacity: 0;
+		bottom: 100vh;
+	}
+	100% {
+		opacity: 1;
+		bottom: -100vh;
+	}
 }
 
 .cloud1 img {
-  position: absolute;
-  height: 100px;
-  width: auto;
-  top: 10vh;
-  left: 20vw;
-  animation: move 24s ease-in-out infinite;
+	position: absolute;
+	height: 100px;
+	width: auto;
+	top: 10vh;
+	left: 20vw;
+	animation: move 24s ease-in-out infinite;
 }
 
 .cloud2 img {
-  position: absolute;
-  height: 150px;
-  width: auto;
-  top: 30vh;
-  left: 35vw;
-  animation: move3 20s ease-in-out infinite;
+	position: absolute;
+	height: 150px;
+	width: auto;
+	top: 30vh;
+	left: 35vw;
+	animation: move3 20s ease-in-out infinite;
 }
 
 .cloud3 img {
-  position: absolute;
-  height: 100px;
-  width: auto;
-  top: 50vh;
-  right: 15vw;
-  animation: move 20s ease-in-out infinite;
+	position: absolute;
+	height: 100px;
+	width: auto;
+	top: 50vh;
+	right: 15vw;
+	animation: move 20s ease-in-out infinite;
 }
 
 .cloud4 img {
-  position: absolute;
-  height: 150px;
-  width: auto;
-  top: 10vh;
-  right: 15vw;
-  animation: move2 10s ease-in-out infinite;
+	position: absolute;
+	height: 150px;
+	width: auto;
+	top: 10vh;
+	right: 15vw;
+	animation: move2 10s ease-in-out infinite;
 }
 
 .cloud5 img {
-  position: absolute;
-  height: 150px;
-  width: auto;
-  bottom: 10vh;
-  right: 5vw;
-  animation: move 30s ease-in-out infinite;
+	position: absolute;
+	height: 150px;
+	width: auto;
+	bottom: 10vh;
+	right: 5vw;
+	animation: move 30s ease-in-out infinite;
 }
 
 .cloud6 img {
-  position: absolute;
-  height: 200px;
-  width: auto;
-  bottom: 12vh;
-  left: 15vw;
-  animation: move2 30s ease-in-out infinite;
+	position: absolute;
+	height: 200px;
+	width: auto;
+	bottom: 12vh;
+	left: 15vw;
+	animation: move2 30s ease-in-out infinite;
 }
 
 .cloud7 img {
-  position: absolute;
-  height: 150px;
-  width: auto;
-  bottom: 5vh;
-  left: 25vw;
-  animation: move 10s ease-in-out infinite;
+	position: absolute;
+	height: 150px;
+	width: auto;
+	bottom: 5vh;
+	left: 25vw;
+	animation: move 10s ease-in-out infinite;
 }
 
 @keyframes move {
-  0%{
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-  50%{
-    opacity: 1;
-  }
-  100%{
-    transform: translate(-300px, 0);
-    opacity: 0;
-  }
+	0% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-300px, 0);
+		opacity: 0;
+	}
 }
 
 @keyframes move2 {
-  0%{
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-  50%{
-    opacity: 1;
-  }
-  100%{
-    transform: translate(200px, 0);
-    opacity: 0;
-  }
+	0% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(200px, 0);
+		opacity: 0;
+	}
 }
 
 @keyframes move3 {
-  0%{
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-  50%{
-    opacity: 1;
-  }
-  100%{
-    transform: translate(-100px, 0);
-    opacity: 0;
-  }
+	0% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-100px, 0);
+		opacity: 0;
+	}
 }
 
 /* SPUTNIK */
-.space-craft img{
-  height: 500px;
-  width: auto;
-  position: absolute;
-  right: -500px;
+
+.space-craft img {
+	height: 500px;
+	width: auto;
+	position: absolute;
+	right: -500px;
 }
 
 .animate-space-craft {
-  animation: glide-in 30s forwards;
+	animation: glide-in 30s forwards;
 }
 
 .hide {
-  display: none;
+	display: none;
 }
 
 .sputnik img {
-  height: 500px;
-  width: auto;
-  position: absolute;
-  animation: up-and-down 10s infinite;
-  transform: rotate(-25deg);
+	height: 500px;
+	width: auto;
+	position: absolute;
+	animation: up-and-down 10s infinite;
+	transform: rotate(-25deg);
 }
 
 /*Space Newt*/
 
 .newt-space {
-  height: 600px;
-  width: 450px;
-  transform: translateX(-500px);
-  animation: slide-in 1s ease-out 45s forwards;
+	height: 600px;
+	width: 450px;
+	transform: translateX(-500px);
+	animation: slide-in 1s ease-out 5s forwards;
 }
 
 @keyframes slide-in {
-  0% {
-    transform: translateX(-500px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
+	0% {
+		transform: translateX(-500px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+.land-on-moon {
+	animation: land-on-moon 10s ease-in-out 10s forwards;
+}
+
+@keyframes land-on-moon {
+	0% {
+		transform: translateX(0px) scale(1);
+	}
+	100% {
+		transform: translateX(1300px) scale(0.3) skewY();
+	}
 }
 
 #newt-space {
-  position: absolute;
-  height: 450px;
-  width: auto;
-  top: 25%;
+	position: absolute;
+	height: 450px;
+	width: auto;
+	top: 25%;
 }
 
 #front-space {
-  position: absolute;
-  height: 120px;
-  width: auto;
-  top: 62%;
-  left: 50%;
+	position: absolute;
+	height: 120px;
+	width: auto;
+	top: 62%;
+	left: 50%;
 }
 
 #back-space {
-  position: absolute;
-  height: 120px;
-  width: auto;
-  top: 62%;
-  left: 14%;
+	position: absolute;
+	height: 120px;
+	width: auto;
+	top: 62%;
+	left: 14%;
 }
