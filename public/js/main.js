@@ -21,7 +21,7 @@ var sputnikMilestone = document.querySelector('.sputnik-milestone'),
     issMilestone     = document.querySelector('.iss-milestone'),
     hubbleMilestone  = document.querySelector('.hubble-milestone');
 
-//  Space crafts
+//  Celestial object
 var sputnikSpaceCraft = document.querySelector('.sputnik'),
     issSpaceCraft     = document.querySelector('.iss'),
     hubbleSpaceCraft  = document.querySelector('.hubble');

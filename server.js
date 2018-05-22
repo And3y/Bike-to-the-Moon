@@ -5,7 +5,6 @@ var express = require('express'),
 
 //  Host files
 app.use(express.static('public'));
-console.log('My socket server is running');
 
 //  Johnny-Five
 var five  = require("johnny-five"),
