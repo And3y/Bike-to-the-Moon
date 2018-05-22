@@ -3,7 +3,7 @@ var socket;
 socket = io.connect('http://localhost:3000');
 
 //  Wheel info
-var wheelRadius   = 25,
+var wheelRadius   = 26,
     circumference = 2 * Math.PI * wheelRadius;
 
 //  Timer
