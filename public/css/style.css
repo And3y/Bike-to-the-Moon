@@ -179,6 +179,34 @@ body {
     animation: turn-on-lights .2s .8s forwards, waving-lights 10s 1s alternate-reverse infinite;
 }
 
+.space-newt {
+    position: absolute;
+}
+
+.moon {
+    position: absolute;
+    right: -1130px;
+    bottom: -350px;
+}
+
+.moon img{
+    height: 2000px;
+    width: auto;
+}
+
+.animate-moon {
+    animation: animate-moon 15s forwards;
+}
+
+@keyframes animate-moon {
+    0% {
+        transform: translateX(1000px) scale(0.1);
+    }
+    100% {
+        transform: translateX(0px) scale(1);
+    }
+}
+
 @keyframes fade-out {
     0% {
         opacity: 1;
