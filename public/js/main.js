@@ -29,11 +29,14 @@ var sputnikSpaceCraft = document.querySelector('.sputnik'),
 
 //  Progress bar
 var progressBar  = document.querySelector('.progress'),
-    progressShip = document.querySelector('.progress-ship');
+    progressShip = document.querySelector('.progress-ship'),
+    progressWrapper = document.querySelector('.progress-bar');
 
 //  Elements
 var disDiv = document.querySelector('.distance'),
-    intro  = document.querySelector('.intro');
+    intro  = document.querySelector('.intro'),
+    earth  = document.querySelector('.sky-background'),
+    cosmonewt = document.querySelector('.newt');
 
 
 //  Sleep function
@@ -43,10 +46,17 @@ function sleep(ms) {
 
 //  Start intro sequence
 async function startIntro() {
-    intro.classList.add('animate-intro');
+    //intro.classList.add('animate-intro');
     // LET THE INTRO RUN THEN HIDE IT
-    await sleep(45000);
+    await sleep(23000);
     intro.classList.add('hide');
+    earth.classList.add('hide');
+    disDiv.classList.remove('hide');
+    progressWrapper.classList.remove('hide');
+
+    for(let i = 0; i < star.length; i++) {
+        star[i].classList.remove('hide');
+    }
 }
 
 //  Logs roatation number from Johnny-Five in server
@@ -143,6 +153,10 @@ issSpaceCraft.addEventListener('animationend', function() {
 hubbleSpaceCraft.addEventListener('animationend', function() {
     this.style.willChange = 'auto';
     this.classList.add('hide');
+})
+
+cosmonewt.addEventListener('animationend', function() {
+    intro.classList.remove('hide');
 })
 
 // intro.addEventListener('animationend', function(){
