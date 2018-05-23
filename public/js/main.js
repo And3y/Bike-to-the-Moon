@@ -50,7 +50,7 @@ function sleep(ms) {
 async function startIntro() {
     //intro.classList.add('animate-intro');
     // LET THE INTRO RUN THEN HIDE IT
-    await sleep(23000);
+    await sleep(19000);
     intro.classList.add('hide');
     earth.classList.add('hide');
     disDiv.classList.remove('hide');
