@@ -18,6 +18,10 @@ body {
     text-align: center;
 }
 
+.distance-opacity {
+    opacity: 0;
+}
+
 .distance-number {
     font-size: 57px;
     font-weight: 500;
@@ -134,7 +138,7 @@ body {
     top: 0;
     width: 100vw;
     z-index: 1000;
-    animation: fade-out 1s forwards 2.5s;
+    animation: fade-out 1s forwards 4s;
 }
 /*
 .animate-intro {
@@ -153,7 +157,7 @@ body {
 }
 
 .present {
-    animation: scale-up .5s cubic-bezier(.87,.13,.84,.91) forwards, fade-out .3s forwards 2s;
+    animation: scale-up .5s cubic-bezier(.87,.13,.84,.91) forwards, fade-out .3s forwards 4s;
     color: #fff;
     font-family: 'Futura PT';
     font-size: 30px;
@@ -165,7 +169,7 @@ body {
 }
 
 .journey {
-    animation: scale-up .5s cubic-bezier(.87,.13,.84,.91) forwards .25s, full-scale-up .5s cubic-bezier(.19,.73,.65,.92) forwards 2s;
+    animation: scale-up .5s cubic-bezier(.87,.13,.84,.91) forwards .25s, full-scale-up .5s cubic-bezier(.19,.73,.65,.92) forwards 4s;
     height: 500px;
     opacity: 0;
     width: auto;
