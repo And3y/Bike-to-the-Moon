@@ -299,14 +299,12 @@ transform: translate(-650px, 150px) scale(2.5);
 
 @keyframes full-scale-up {
     0% {
-        transform: scale(1);
         opacity: 1;
     }
     50% {
         opacity: 0;
     }
     100% {
-        transform: scale(30);
         opacity: 0;
     }
 }
