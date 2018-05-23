@@ -106,12 +106,18 @@ socket.on('rotation', function(wheelRotation) {
         hubbleSpaceCraft.classList.add('animate-space-craft');
     }
 
-    if (distanceMeter > 9000 && distanceMeter < 9020) {
+    if (distanceMeter > 8000 && distanceMeter < 8020) {
+        moonSpaceCraft.classList.remove('hide');
+        moonSpaceCraft.classList.add('animate-moon');
     }
 
     if (distanceMeter > 9500 && distanceMeter < 9520) {
-        moonSpaceCraft.classList.remove('hide');
-        moonSpaceCraft.classList.add('animate-moon');
+        moonSpaceCraft.classList.add('further-animate-moon');
+    }
+
+    if (distanceMeter > 9800 && distanceMeter < 9820) {
+        moonSpaceCraft.classList.add('moon-landing');
+        cosmoNewt.classList.add('land-on-moon');
     }
 });
 
