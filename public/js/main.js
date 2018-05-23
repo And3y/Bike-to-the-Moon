@@ -28,8 +28,9 @@ var sputnikSpaceCraft = document.querySelector('.sputnik'),
     moonSpaceCraft    = document.querySelector('.moon');
 
 //  Progress bar
-var progressBar  = document.querySelector('.progress'),
-    progressShip = document.querySelector('.progress-ship'),
+var progressBar     = document.querySelector('.progress'),
+    progressShip    = document.querySelector('.progress-ship'),
+    milestoneBox    = document.querySelector('.milestone-box');
     progressWrapper = document.querySelector('.progress-bar');
 
 //  Elements
@@ -52,6 +53,7 @@ async function startIntro() {
     intro.classList.add('hide');
     earth.classList.add('hide');
     disDiv.classList.remove('hide');
+    milestoneBox.classList.remove('hide');
     progressWrapper.classList.remove('hide');
 
     for(let i = 0; i < star.length; i++) {
