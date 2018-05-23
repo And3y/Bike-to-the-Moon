@@ -34,10 +34,11 @@ var progressBar     = document.querySelector('.progress'),
     progressWrapper = document.querySelector('.progress-bar');
 
 //  Elements
-var disDiv = document.querySelector('.distance'),
-    intro  = document.querySelector('.intro'),
-    earth  = document.querySelector('.sky-background'),
-    cosmonewt = document.querySelector('.newt');
+var disDiv    = document.querySelector('.distance'),
+    intro     = document.querySelector('.intro'),
+    earth     = document.querySelector('.sky-background'),
+    introNewt = document.querySelector('.newt'),
+    cosmoNewt = document.querySelector('.newt-space');
 
 
 //  Sleep function
@@ -163,6 +164,6 @@ hubbleSpaceCraft.addEventListener('animationend', function() {
     this.classList.add('hide');
 })
 
-cosmonewt.addEventListener('animationend', function() {
+introNewt.addEventListener('animationend', function() {
     intro.classList.remove('hide');
 })
