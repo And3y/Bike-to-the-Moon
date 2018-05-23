@@ -134,7 +134,7 @@ body {
     top: 0;
     width: 100vw;
     z-index: 1000;
-    animation: fade-out 1s forwards 4.5s;
+    animation: fade-out 1s forwards 2.5s;
 }
 /*
 .animate-intro {
@@ -153,7 +153,7 @@ body {
 }
 
 .present {
-    animation: scale-up .5s cubic-bezier(.87,.13,.84,.91) forwards, fade-out .3s forwards 4s;
+    animation: scale-up .5s cubic-bezier(.87,.13,.84,.91) forwards, fade-out .3s forwards 2s;
     color: #fff;
     font-family: 'Futura PT';
     font-size: 30px;
@@ -165,7 +165,7 @@ body {
 }
 
 .journey {
-    animation: scale-up .5s cubic-bezier(.87,.13,.84,.91) forwards .25s, full-scale-up .5s cubic-bezier(.19,.73,.65,.92) forwards 4s;
+    animation: scale-up .5s cubic-bezier(.87,.13,.84,.91) forwards .25s, full-scale-up .5s cubic-bezier(.19,.73,.65,.92) forwards 2s;
     height: 500px;
     opacity: 0;
     width: auto;
@@ -179,7 +179,7 @@ body {
     transform-origin: bottom center;
     width: auto;
     z-index: 0;
-    animation: fade-out .3s forwards 5s;
+    animation: fade-out .3s forwards;
 }
 
 .left-beam {
