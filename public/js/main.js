@@ -53,7 +53,7 @@ async function startIntro() {
     await sleep(19000);
     intro.classList.add('hide');
     earth.classList.add('hide');
-    disDiv.classList.remove('hide');
+    disDiv.classList.remove('distance-opacity');
     milestoneBox.classList.remove('hide');
     progressWrapper.classList.remove('hide');
 
