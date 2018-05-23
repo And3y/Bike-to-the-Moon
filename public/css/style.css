@@ -188,25 +188,51 @@ body {
 
 .moon {
     position: absolute;
-    right: -1130px;
-    bottom: -350px;
+    right: 100px;
+    bottom: 500px;
 }
 
 .moon img{
-    height: 2000px;
+    height: 400px;
     width: auto;
 }
 
 .animate-moon {
-    animation: animate-moon 15s forwards;
+    animation: animate-moon 10s forwards;
+}
+
+.further-animate-moon {
+    animation: further-animate-moon 5s forwards;
+}
+
+.moon-landing {
+    animation: moon-landing ease-in-out 10s forwards;
 }
 
 @keyframes animate-moon {
     0% {
-        transform: translateX(1000px) scale(0.1);
+        transform: translateX(500px) scale(0.5);
     }
     100% {
         transform: translateX(0px) scale(1);
+    }
+}
+
+@keyframes further-animate-moon {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    100% {
+        transform: translate(250px, 200px) scale(4);
+    }
+}
+
+@keyframes moon-landing {
+    0% {
+transform: translate(200px, 200px) scale(4);
+    }
+    100% {
+transform: translate(-650px, 150px) scale(2.5);
     }
 }
 

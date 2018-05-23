@@ -369,7 +369,7 @@ body {
 }
 
 .land-on-moon {
-	animation: land-on-moon 10s ease-in-out 10s forwards;
+	animation: land-on-moon 10s ease-in-out forwards;
 }
 
 @keyframes land-on-moon {
@@ -377,7 +377,7 @@ body {
 		transform: translateX(0px) scale(1);
 	}
 	100% {
-		transform: translateX(1300px) scale(0.3) skewY();
+		transform: translateX(900px) scale(0.3);
 	}
 }
 
