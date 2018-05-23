@@ -69,12 +69,12 @@ body {
     transform-origin: center left;
     bottom: 40px;
     opacity: 0;
-    transition: 1s;
+    transition: 2s;
 }
 
 .milestone-fade-in {
     opacity: 1;
-    transition: 1s;
+    transition: 2s;
 }
 
 .sputnik-milestone {

@@ -57,7 +57,7 @@ async function startIntro() {
     milestoneBox.classList.remove('hide');
     progressWrapper.classList.remove('hide');
 
-    for(let i = 0; i < star.length; i++) {
+    for (let i = 0; i < star.length; i++) {
         star[i].classList.remove('hide');
     }
 }
@@ -78,9 +78,11 @@ socket.on('rotation', function(wheelRotation) {
     progressBar.style.width = percentageOfTrip + '%';
     progressShip.style.left = (percentageOfTrip - 2) + '%';
 
-    if (percentageOfTrip > 100) {
+    if (percentageOfTrip >= 100) {
         progressBar.style.width = '100%';
-        progressShip.style.left = '100%';
+    }
+    if (percentageOfTrip >= 98) {
+        progressShip.style.left = '98%'
     }
 
     if (wheelRotation.number === 1) {
