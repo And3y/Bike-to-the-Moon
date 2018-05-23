@@ -204,7 +204,7 @@ body {
 	height: 600px;
 	width: 450px;
 	transform: translateX(-500px);
-	animation: slide-in 2s ease-out 17s forwards;
+	animation: slide-in 2s ease-out 20s forwards;
 }
 
 @keyframes slide-in {

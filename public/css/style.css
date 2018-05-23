@@ -169,7 +169,7 @@ body {
 }
 
 .journey {
-    animation: scale-up .5s cubic-bezier(.87,.13,.84,.91) forwards .25s, full-scale-up .5s cubic-bezier(.19,.73,.65,.92) forwards 4s;
+    animation: scale-up .5s cubic-bezier(.87,.13,.84,.91) forwards .75s, full-scale-up .5s cubic-bezier(.19,.73,.65,.92) forwards 4s;
     height: 500px;
     opacity: 0;
     width: auto;
@@ -188,13 +188,13 @@ body {
 
 .left-beam {
     right: 35%;
-    animation: turn-on-lights .2s .7s forwards, waving-lights 10s alternate-reverse infinite;
+    animation: turn-on-lights .2s .7s forwards, waving-lights2 5s ease-in-out alternate-reverse infinite;
 }
 
 .right-beam {
     left: 35%;
     transform: rotate(-20deg);
-    animation: turn-on-lights .2s .8s forwards, waving-lights 10s 1s alternate-reverse infinite;
+    animation: turn-on-lights .2s .8s forwards, waving-lights 5s ease-in-out alternate-reverse infinite;
 }
 
 .space-newt {
@@ -272,14 +272,20 @@ transform: translate(-650px, 150px) scale(2.5);
     }
 }
 
-@keyframes turn-on-lights {
+@keyframes waving-lights2 {
     0% {
-        opacity: 0;
-    }
-    30% {
-        opacity: 1;
+        transform: rotate(20deg);
     }
     50% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes turn-on-lights {
+    0% {
         opacity: 0;
     }
     100% {
