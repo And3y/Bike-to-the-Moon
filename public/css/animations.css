@@ -207,15 +207,6 @@ body {
 	animation: slide-in 2s ease-out 20s forwards;
 }
 
-@keyframes slide-in {
-	0% {
-		transform: translateX(-500px);
-	}
-	100% {
-		transform: translateX(0px);
-	}
-}
-
 .land-on-moon {
 	animation: land-on-moon 10s ease-in-out forwards;
 }
@@ -420,4 +411,22 @@ body {
 		transform: translateY(200vh);
 		opacity: 1;
 	}
+}
+
+@keyframes slide-in {
+	0% {
+		transform: translateX(-500px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes fly-out {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(-100vh)
+    }
 }
